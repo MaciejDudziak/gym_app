@@ -74,9 +74,13 @@ WSGI_APPLICATION = 'gym_app.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "railway",
+        "USER": "postgres",
+        "PASSWORD": "1BA-Ge3dfdCd51*g6-4*DdEb21DdcA-f",
+        "HOST": "viaduct.proxy.rlwy.net",
+        "PORT": "55839",
     }
 }
 
