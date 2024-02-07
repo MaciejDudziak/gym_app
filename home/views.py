@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse
-
+from .models import exercise
 # Create your views here.
 def home(request):
-    return render(request, "home.html")
+    items = exercise.objects.all()
+    return render(request, "home.html", {"exercises": items})

@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-
-<html>
-
-<head>
-    <title>Home page</title>
-</head>
-
-<body>
-        <h1>Home page test</h1>
-        <p>
-            tekst tekst tekst
-        </p>
-</body>
-
-</html
+{% block content %}
+<h1>Exercises list:</h1>
+<ol>
+    {% for exercise in exercises %}
+    <li>
+        {{ exercise.name }}: series: {{ exercise.series_number }} reps: {{ exercise.rep_number }}
+    </li>
+    {% endfor %}
+</ol>
+{% endblock %}
