@@ -8,4 +8,4 @@ def login(request):
     return HttpResponse("login")
 
 def register(request):
-    return HttpResponse("register")
+    return render(request, "register.html")
