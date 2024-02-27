@@ -1,10 +1,13 @@
-{% block content %}
-<h1>Exercises list:</h1>
-<ol>
-    {% for exercise in exercises %}
-    <li>
-        {{ exercise.name }}: series: {{ exercise.series_number }} reps: {{ exercise.rep_number }}
-    </li>
-    {% endfor %}
-</ol>
-{% endblock %}
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="static/home.css">
+    <title>home page</title>
+</head>
+
+<body>
+  <form method="post">
+      {% csrf_token %} 
+      {{ form.as_p }}
+      <button type="submit", name="signin">Sign in</button>
+  </form>
+</body> 
