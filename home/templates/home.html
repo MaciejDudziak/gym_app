@@ -5,6 +5,10 @@
 </head>
 
 <body>
+  {% if user.is_authenticated %}
+  <p>you are already logged in</p>
+  {% else %}
   <a href="/register">register</a>
   <a href="/login">log in</a>
+  {% endif %}
 </body> 
