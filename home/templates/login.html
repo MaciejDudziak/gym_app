@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="static/home.css">
+    <title>gym_app-log in</title>
+</head>
+
+<body>
+  {% if not user.is_authenticated %}
+  <form method="post">
+      {% csrf_token %} 
+      {{ form.as_p }}
+      <button type="submit" name="login">Log in</button>
+  </form>
+
+  {% else %}
+  <p>you are already logged in</p>
+  {% endif %}
+</body> 
