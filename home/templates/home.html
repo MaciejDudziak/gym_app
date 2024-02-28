@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" href="static/home.css">
-    <title>home page</title>
+    <title>gym-app-home</title>
 </head>
 
 <body>
-  <form method="post">
-      {% csrf_token %} 
-      {{ form.as_p }}
-      <button type="submit", name="signin">Sign in</button>
-  </form>
+  <a href="/register">register</a>
+  <a href="/login">log in</a>
 </body> 

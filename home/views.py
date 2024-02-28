@@ -6,6 +6,14 @@ from django.db import IntegrityError
 
 def home(request):
     
+    return render(request, "home.html")
+
+def login(request):
+    return HttpResponse("login")
+
+def register(request):
+     
+
     if request.method == "POST":
         form = RegisterForm(request.POST)
 
@@ -23,10 +31,4 @@ def home(request):
     else:
         form = RegisterForm()
 
-    return render(request, "home.html", {"form":form})
-
-def login(request):
-    return HttpResponse("login")
-
-def register(request):
-    return render(request, "register.html")
+    return render(request, "register.html", {"form":form})

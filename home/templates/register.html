@@ -1,12 +1,13 @@
+<!DOCTYPE html>
 <head>
     <link rel="stylesheet" href="static/home.css">
+    <title>gym_app-register</title>
 </head>
 
 <body>
-<form>
-    <label for="fname">First name:</label><br>
-    <input type="text" id="fname" name="fname"><br>
-    <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="lname">
+  <form method="post">
+      {% csrf_token %} 
+      {{ form.as_p }}
+      <button type="submit", name="signin">Sign in</button>
   </form>
-</body>
+</body> 
