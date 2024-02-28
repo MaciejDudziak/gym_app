@@ -5,9 +5,14 @@
 </head>
 
 <body>
+  {% if not user.is_authenticated %}
   <form method="post">
       {% csrf_token %} 
       {{ form.as_p }}
-      <button type="submit", name="signin">Sign in</button>
+      <button type="submit" name="signin">Sign in</button>
   </form>
+
+  {% else %}
+  <p>you are already logged in</p>
+  {% endif %}
 </body> 
