@@ -13,6 +13,6 @@ class User_sessions(models.Model):
 
 class Session_exercise(models.Model):
     session_id = models.ForeignKey(User_sessions, on_delete=models.CASCADE)
-    user_id = models.ForeignKey(Exercise, on_delete=models.CASCADE)
+    exercise_id = models.ForeignKey(Exercise, on_delete=models.CASCADE)
     rep_number = models.IntegerField()
     series_number = models.IntegerField()
